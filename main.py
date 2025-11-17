@@ -4,6 +4,12 @@ from torchvision import transforms, models
 from fastapi import FastAPI, UploadFile, File
 from PIL import Image
 import io
+import uvicorn
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
 
 app = FastAPI()
 

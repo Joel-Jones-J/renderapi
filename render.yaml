@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: mobilenet-api
-    runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "./start.sh"
-    plan: free
-    autoDeploy: true
