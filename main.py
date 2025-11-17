@@ -38,3 +38,6 @@ async def predict(file: UploadFile = File(...)):
 @app.get("/")
 def root():
     return {"message": "Model API is running!"}
+@app.get("/health")
+def health():
+    return {"status": "ok"}
